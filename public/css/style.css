@@ -1,0 +1,269 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  padding: 1.5em 6em;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color:#67A4F5;
+  font-family: 'Montserrat', sans-serif;
+}
+.logo a{
+  margin-right: 4em;
+  flex: 1;
+  font-weight: bold;
+  color: whitesmoke;
+  font-size: 25px;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding-bottom: 0.4em;
+  letter-spacing: 1px;
+}
+.nav-links a:hover {
+  border-bottom: 4px solid #85BAFF;
+  color: #3667A8;
+}
+nav ul {
+  list-style: none;
+}
+.active-page {
+  font-weight: bold;
+  border-bottom: 4px solid #3667A8;
+}
+.gap {
+  margin-left: 3em;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 4px;
+  background-color:whitesmoke;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 913px){
+  body {
+    overflow: hidden;
+  }
+  .nav-links {
+    position: absolute;
+      right: 0px;
+      height: 82vh;
+      width: 50%;
+      top: 8vh;
+      background-color: #67A4F5;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    transform: translateX(100%);
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger { 
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@media screen and (max-width: 500px){
+  body {
+    overflow: hidden;
+  }
+    nav {
+      padding: 2em;
+    }
+  .nav-links {
+    position: absolute;
+      right: 0px;
+      height: 82vh;
+      width: 100%;
+      top: 8vh;
+      background-color: #67A4F5;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    transform: translateX(100%);
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger { 
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.hero {
+    height: 80%;
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(180, 180, 180, 0.377), rgba(20, 20, 20, 0.5)), url(assets/city-of-gold-coast-HoB3IMAZN30-unsplash.jpg);
+    /* Set a specific height */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-text {
+    margin: 5em;
+    max-width: 40%;
+    text-align: left;
+    float: left;
+}
+h1 {
+    font-size: 44px;
+    font-family: 'Montserrat', sans-serif; 
+
+}
+.hero-text h1 {
+  color: #fdcb9e;
+}
+p {
+    font-size: 25px;
+    font-family:'Source Sans Pro', sans-serif;
+}
+.hero-text p {
+  color: whitesmoke;
+}
+li {
+  list-style-type: none;
+}
+.categories {
+  margin: 6em 20em;
+}
+.categories-text {
+  text-align: right;
+  margin-top: 4em;
+  margin-bottom: 8em;
+}
+.categories-text h1 {
+  color: #1C2B2D;
+}
+.categories-text p {
+  color: #1C2B2D;
+  opacity: 85%;
+}
+.categories-grid {
+  display: grid;
+  text-align: center; 
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 3em;
+  margin: 4em 1em;
+}
+ul {
+  padding-inline-start: 0;
+}
+.grid-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 5%;
+}
+.cardtext-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(255, 212, 177);
+  border-radius: 5%;
+}
+.cardimg-container {
+  padding: 1em;
+
+}
+.grid-item:hover {
+  transform: translateY(-2%);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  background-color: #e6f2f3;
+}
+.grid-item h3 {
+  color:#1b262c;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif; 
+}
+.posts {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+  padding: 1em 20em;
+  background-color: #fce6d4;
+}
+.post {
+  flex-shrink: 1;
+  margin-top: 6em;
+  margin-bottom: 6em;
+  background-color: #ffffff;
+  border-radius: 3% 3%;
+}
+.post h2 {
+  font-size: 30px;
+  font-family:'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+.ctg {
+  font-family: 'Source Sans Pro', Helvetica, Arial, serif;
+  font-size: 14px;
+  color: #1b262c;
+  font-weight: 700;
+  padding: 2.5em 1.5em;
+}
+.span {
+  color: #1F6F8B;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+.ctg-ctg {
+  color: #1F6F8B;
+
+}
+.post img {
+  height: 20em;
+}
